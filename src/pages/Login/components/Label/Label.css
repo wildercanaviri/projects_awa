@@ -1,0 +1,8 @@
+.text-container label{
+    color: #000000;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-weight: bold;  
+    padding: 10px 0 3px 0;
+}
