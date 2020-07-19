@@ -121,6 +121,7 @@ const Login = () =>{
                      <button onClick={handleSubmit} className='submit-button'>
                         Ingresar
                      </button>
+                     <button onClick={handleSubmit} className='submit-button'>Cancelar</button>
                 </div>
     
              </div>        

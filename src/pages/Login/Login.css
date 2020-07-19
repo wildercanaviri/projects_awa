@@ -4,9 +4,16 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 100%;
+    width: 99.8%;
+    max-width:330px;
+    padding:15px;
+    margin:auto;
     height: 100vh;
     background: #ffffff;
+
+}
+.card-body{
+    background-color: rgba(0, 140, 255, 0.342);
 }
 
 .login-content{
@@ -44,7 +51,7 @@
     border: none;
     outline: none;
     background: #27AE60;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: bold;
     color: white;
 }
@@ -70,8 +77,8 @@
 .home-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: 50;
+    align-items: 50;
 }
 
 .home-container h1, .home-container label{
