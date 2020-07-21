@@ -76,6 +76,7 @@ const Login = () =>{
                 <Card text="Soy una tarjeta"/>
 
                 <Title text="Bienvenido"/>
+                <div class= 'color color-primary'></div>
                     <div className='image-container'>
                         <img src={logo} alt='Eduapp' className='image-content'/> 
                     </div>
@@ -87,7 +88,7 @@ const Login = () =>{
                     </label>
                 
                 }
-                <Label text="Usuario"/>
+                <Label text ="Usuario"/>
                 <Input
                 attribute={{
                     id:'usuario',
