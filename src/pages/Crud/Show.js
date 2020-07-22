@@ -2,7 +2,6 @@ import React,{useState, useEffect} from 'react';
 import {link} from 'react-router-dom';
 
 import {db} from '../../firebase/firebaseConfig';
-import { Last } from 'react-bootstrap/esm/PageItem';
 
 const Show = () =>{
     const [usuarios, setUsuarios] = useState([]);
@@ -44,23 +43,6 @@ return (
                 <th>Apellido</th>
                 <th>Sala</th>  
             </tr>
-            {
-                usuarios.map({{nombre, apellido, sala, key}})=>{
-                        <tr key={key}>
-                            <td>Nombre</td>
-                            <td>Apellido</td>
-                            <td>Sala</td>
-                            <td>
-                                <button>
-                                    <link to={'/edit/$key'}></link>
-                                </button>
-
-                                <button onClick={Borrar(key)}>Borrar</button>
-
-                            </td>
-                        </tr>
-                }
-            }
         </table>
     </>
 );

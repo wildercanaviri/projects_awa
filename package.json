@@ -15,7 +15,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "reactfire": "^2.0.0-alpha.3",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "uuid": "^8.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
