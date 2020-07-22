@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import firebase from './firebase/firebaseConfig';
+import {FirebaseAppProvider} from  'reactfire';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+      <FirebaseAppProvider firebaseConfig={firebase}>
+            <App />
+      </FirebaseAppProvider>      
+      ,
+      document.getElementById('root')
 );
-serviceWorker.unregister();
+serviceWorker.register();
