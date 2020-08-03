@@ -1,35 +1,47 @@
-import React,{useState} from 'react';
-import './Home.css';
-import Cards from './Card/Card'
-import {Redirect} from 'react-router-dom';
-import { Button } from 'react-bootstrap';
-import {auth} from '../../firebase/firebaseConfig';
+import React,{Fragment} from 'react';
+import Header from '../../components/layouts/Header';
+import {Carousel} from 'react-bootstrap';
+import carousel1 from '../../assets/images/carousel1.jpg';
+import carousel2 from '../../assets/images/carousel2.jpg';
+import carousel3 from '../../assets/images/carousel3.jpg';
+
+import './Home.css'
 
 const Home = () =>{
-    const[isLogout, setIsLogout]=useState(false);
-    function logout(){
-        
-        setIsLogout(true);
-        auth.signOut();
-    }
+    
     return(
-        <>
-        {!auth && <Redirect to= '/login'/>}  
-        
-        {isLogout && <Redirect to= '/login'/>}  
-         <Button onClick={logout} variant="light">Cerrar Sesion</Button>
-        <div>
-            <Cards  props={{
-                        title:'Aplicaciones Web Avanzadas',
-                        text:'Vladimir Costas'
-                    }}/>     
-            
-            <Cards  props={{
-                        title:'Redes Avanzadas de Computadoras',
-                        text:'Montecinos Victor Hugo'
-                    }}/>
-        </div>
-       </>
+        <Fragment>
+            <Header/>
+            <Carousel>
+                <Carousel.Item>
+                    <img
+                    className="carousel-image"
+                    src={carousel1}
+                    alt="First slide"
+                    />
+                   
+                </Carousel.Item>
+                
+                <Carousel.Item>
+                    <img
+                    className="carousel-image"
+                    src={carousel2}
+                    alt="Third slide"
+                    />
+
+                </Carousel.Item>
+           
+                <Carousel.Item>
+                    <img
+                    className="carousel-image"
+                    src={carousel3}
+                    alt="Third slide"
+                    />
+
+                </Carousel.Item>
+            </Carousel>
+        </Fragment>
     );
 }
+
 export default Home;

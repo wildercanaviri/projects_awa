@@ -115,7 +115,13 @@ const Login = () =>{
                     <button onClick={handleSubmit} className='submit-button'>
                         Ingresar
                     </button>
-                </div>                
+                </div>   
+                
+                <div className="crear-cuenta">
+                    <a href="/createUser">
+                    crear cuenta    
+                    </a>       
+                </div>    
                 
       
              </div>                   
