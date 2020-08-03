@@ -6,7 +6,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #ffffff;
+      
 }
 
 .login-content{
@@ -76,4 +76,9 @@
 
 .home-container h1, .home-container label{
     color: white;
+}
+
+.crear-cuenta{
+    font-size: 14px;
+    text-align: center;
 }
